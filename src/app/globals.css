@@ -31,3 +31,47 @@ body {
     text-wrap: balance;
   }
 }
+
+@layer base {
+  @font-face {
+    font-family: "archivo";
+    font-display: swap;
+    src: url("/fonts/Archivo/Archivo-Regular.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "archivo-semibold";
+    font-display: swap;
+    src: url("/fonts/Archivo/Archivo-SemiBold.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "archivo-semibold-italic";
+    font-display: swap;
+    src: url("/fonts/Archivo/Archivo-SemiBoldItalic.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "archivo-thin";
+    font-display: swap;
+    src: url("/fonts/Archivo/Archivo-Thin.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "redditsans-light";
+    font-display: swap;
+    src: url("/fonts/Reddit_Sans/RedditSans-Light.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "redditsans-semibold";
+    font-display: swap;
+    src: url("/fonts/Reddit_Sans/RedditSans-SemiBold.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "redditsans-italic";
+    font-display: swap;
+    src: url("/fonts/Reddit_Sans/RedditSans-Italic.ttf") format("truetype");
+  }
+}
