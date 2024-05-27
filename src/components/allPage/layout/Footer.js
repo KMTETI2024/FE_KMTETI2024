@@ -15,7 +15,7 @@ export default function Footer() {
                         <h2 className="font-redditsansbold text-[2.135vw] text-black">Reach Us</h2>
                         <h2 className="font-redditsansbold text-[2.135vw] text-black">Navigate</h2>
                     </div>
-                    <hr className="z-[9] w-[61.406vw] h-[0.2vw] bg-black mb-[2.448vw]"></hr>
+                    <hr className="z-[9] w-[61.406vw] border-[0.2vw] border-black mb-[2.448vw]"></hr>
                     <div className="flex gap-x-[11.094vw]">
                         <div className="flex gap-x-[1.979vw]">
                             <a className="w-[4.115vw] h-fit" href="https://www.instagram.com/kmteti">
