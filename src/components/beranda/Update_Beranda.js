@@ -1,6 +1,6 @@
 export default function Update_Beranda() {
   return (
-  <div className="w-full h-screen flex flex-row justify-center items-center bg-white">
+  <div className="w-full h-[64.74vw] flex flex-row justify-center items-center bg-white">
           <div className="">
             <h1 className="text-black font-redditsansbold text-[5.208vw] w-[60%]">Our Latest Updates</h1>
             <h2 className="text-black font-redditsans text-[2.083vw] w-[40%]">Don&apos;t forget to Check these out!</h2>
