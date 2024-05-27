@@ -2,9 +2,9 @@
 export default function Kesekretariatan() {
     return(
         <main className="relative flex flex-col items-center justify-center bg-white">
-            <div className="relative w-screen h-screen flex flex-col justify-center items-center">
+            <div className="relative w-full h-screen flex flex-col justify-center items-center">
                 <img src="/img/kesekretariatan/bg.png" className="z-[1] absolute object-cover h-screen w-full opacity-10" alt="" />
-                <div className="z-[2] bg-[#123C59] w-full absolute h-screen opacity-20"></div>
+                <div className="z-[2] bg-[#123C59] w-full absolute h-full opacity-20"></div>
                     <div className="flex flex-row justify-center items-center gap-x-[9vw]">
                         <div className="flex flex-col justify-center items-center">
                             <h1 className=" font-redditsanssemibold text-[3.125vw] z-[2] text-black drop-shadow-2xl text-center w-[35vw]">Alur Peminjaman Alat dan Ruang DTETI</h1>
