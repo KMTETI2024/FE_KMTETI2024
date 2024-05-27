@@ -105,3 +105,17 @@ body {
   justify-content: center;
   align-items: center;
 }
+
+.navbar {
+  background-color: white;
+  height: 5.0519vw;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  transition: top 0.3s;
+}
+
+.navbar.hidden {
+  top: -100px; /* Adjust this value as needed to fully hide the navbar */
+}
