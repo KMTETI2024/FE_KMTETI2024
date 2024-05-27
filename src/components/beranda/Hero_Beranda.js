@@ -23,6 +23,13 @@ export default function Hero_Beranda() {
         setStretchedIndex(index);
     };
 
+    const handleClick = () => {
+        window.scrollTo({
+          top: window.innerHeight,
+          behavior: "smooth",
+        });
+      };
+
     const defaultWidths = ["w-[8.854vw]", "w-[11.458vw]", "w-[8.854vw]"];
     const stretchedWidth = ["w-[31.25vw]", "w-[33.854vw]", "w-[31.25vw]"];
     const hoverWidths = ["hover:w-[31.25vw]", "hover:w-[33.854vw]", "hover:w-[31.25vw]"];
@@ -49,7 +56,7 @@ export default function Hero_Beranda() {
                     </div>
                 ))}
         </div>
-        <img className="absolute bottom-[3vw]" src="/img/kepengurusan/arrow.png" alt="" />
+        <img className="absolute bottom-[3vw] w-[1.354vw] animate-movingPointer hover:cursor-pointer" src="/img/kepengurusan/arrow.png " alt="" onClick={() => handleClick()} />
       </div>
     )
 }
