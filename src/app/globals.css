@@ -58,6 +58,12 @@ body {
   }
 
   @font-face {
+    font-family: "archivo-light";
+    font-display: swap;
+    src: url("/fonts/Archivo/Archivo-Light.ttf") format("truetype");
+  }
+
+  @font-face {
     font-family: "redditsans-light";
     font-display: swap;
     src: url("/fonts/Reddit_Sans/RedditSans-Light.ttf") format("truetype");
@@ -74,4 +80,28 @@ body {
     font-display: swap;
     src: url("/fonts/Reddit_Sans/RedditSans-Italic.ttf") format("truetype");
   }
+
+  @font-face {
+    font-family: "redditsans-semibold-italic";
+    font-display: swap;
+    src: url("/fonts/Reddit_Sans/RedditSans-SemiBoldItalic.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "redditsans-bold";
+    font-display: swap;
+    src: url("/fonts/Reddit_Sans/RedditSans-Bold.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "redditsans-regular";
+    font-display: swap;
+    src: url("/fonts/Reddit_Sans/RedditSans-Regular.ttf") format("truetype");
+  }
+}
+
+.slick-slide > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
