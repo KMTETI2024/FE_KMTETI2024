@@ -17,9 +17,13 @@ module.exports = {
         archivosemibold : ["archivo-semibold"],
         archivothin : ["archivo-thin"],
         archivosemibolditalic : ["archivo-semibold-italic"],
+        archivolight : ["archivo-light"],
         redditsanslight : ["redditsans-light"],
         redditsanssemibold : ["redditsans-semibold"],
-        redditsansitalic : ["redditsans-italic"]
+        redditsansitalic : ["redditsans-italic"],
+        redditsanssemibolditalic : ["redditsans-semibold-italic"],
+        redditsansbold : ["redditsans-bold"],
+        redditsans : ["redditsans-regular"]
       },
     },
   },
