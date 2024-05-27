@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 const Card = ({ title, imgSrc, link }) => (
     <div className="flex flex-col">
         <h2 className="text-black font-redditsanssemibold text-[2.083vw] mb-[1.719vw] drop-shadow-xl">{title}</h2> 
-        <img className="rounded-[0.521vw] drop-shadow-xl" src={imgSrc} alt="" />
+        <img className="rounded-[0.521vw] drop-shadow-xl w-[37.396vw] h-fit" src={imgSrc} alt="" />
         <a href={link} className="mt-[1.719vw] self-end text-black font-redditsansitalic text-[1.042vw] drop-shadow-xl">Selengkapnya {">"}{">"}</a>
     </div>
 );
