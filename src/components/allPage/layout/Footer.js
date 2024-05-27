@@ -3,7 +3,8 @@ import Link from "next/link";
 
 export default function Footer() {
     return (
-        <footer className="flex flex-col">
+        <footer className="relative flex flex-col">
+            <div className="absolute -top-[5vw] z-[20] bg-gradient-to-b from-transparent to-[#e6e6e6] w-full h-[5vw]"></div>
             <div className="w-full h-[19.427vw] bg-[#F9F9F9] py-[3.75vw] flex justify-center items-center ">
                 <img className="w-[10.677vw]" src="/img/allPage/Footer/kmteti.png" alt="" />
                 <div>
