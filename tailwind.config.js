@@ -1,3 +1,5 @@
+const { Montserrat } = require('next/font/google');
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -23,7 +25,8 @@ module.exports = {
         redditsansitalic : ["redditsans-italic"],
         redditsanssemibolditalic : ["redditsans-semibold-italic"],
         redditsansbold : ["redditsans-bold"],
-        redditsans : ["redditsans-regular"]
+        redditsans : ["redditsans-regular"],
+        montserrat : ["montserrat"],
       },
     },
   },
