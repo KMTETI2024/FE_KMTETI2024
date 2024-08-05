@@ -37,7 +37,7 @@ function Artikel() {
                 <img className='w-[19.167vw] rounded-[2.00vw]' src="/img/artikel/voltamagz.png" alt="" />
             </Link>
         </div>
-        <div className='flex flex-col justify-center items-center py-[25.111vw] px-[6.667vw] gap-y-[12.5vw]'>
+        <div className='flex flex-col justify-center items-center py-[25.111vw] px-[6.667vw] gap-y-[12.5vw] lg:hidden'>
             <div className='h-[49.722vw] relative group'>
                 <div className='absolute z-[20] flex flex-col justify-center items-center w-full h-[49.722vw]'>
                     <h1 className='font-redditsanssemibold text-white text-[8.056vw]'>Press Release</h1>
