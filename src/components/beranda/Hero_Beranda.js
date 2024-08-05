@@ -62,7 +62,7 @@ export default function Hero_Beranda() {
                     </div>
                 ))}
             </div>
-            <div className="w-[85vw] h-[65.556vw] flex lg:hidden gap-x-[1.944vw]">
+            <div className="w-[85vw] h-[65.556vw] flex lg:hidden gap-x-[1.944vw] z-[10]">
                 {images.map((src, index) => (
                     <div
                     key={index}

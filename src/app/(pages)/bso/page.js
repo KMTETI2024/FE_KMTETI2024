@@ -19,12 +19,12 @@ Card.propTypes = {
 
 export default function BSO() {
     const cards = [
-        { title: 'Beacon', imgSrc: '/img/bso/Beacon.png', link: '#' },
-        { title: 'Magatrika', imgSrc: '/img/bso/Magatrika.png', link: '#' },
-        { title: 'MPM', imgSrc: '/img/bso/MPM.png', link: '#' },
-        { title: 'Night Login', imgSrc: '/img/bso/Night Login.png', link: '#' },
-        { title: 'SKI', imgSrc: '/img/bso/SKI.png', link: '#' },
-        { title: 'SKK', imgSrc: '/img/bso/SKK.png', link: '#' },
+        { title: 'Beacon', imgSrc: '/img/bso/Beacon.png', link: '/bso/Beacon' },
+        { title: 'Magatrika', imgSrc: '/img/bso/Magatrika.png', link: '/bso/Magatrika' },
+        { title: 'MPM', imgSrc: '/img/bso/MPM.png', link: '/bso/MPM' },
+        { title: 'Night Login', imgSrc: '/img/bso/Night Login.png', link: '/bso/NightLogin' },
+        { title: 'SKI', imgSrc: '/img/bso/SKI.png', link: '/bso/SKI' },
+        { title: 'SKK', imgSrc: '/img/bso/SKK.png', link: '/bso/SKK' },
     ];
 
     return (
@@ -36,7 +36,7 @@ export default function BSO() {
                     ))}
                 </div>
             </section>
-            <section className="h-[350vw] w-full flex-col flex lg:flex-row justify-center items-center bg-white lg:hidden">
+            <section className="relative h-[350vw] w-full flex-col flex lg:flex-row justify-center items-center bg-white lg:hidden">
                 <img src="/img/home/circle-tr.svg" alt="" className="absolute top-[-20vw] right-0 lg:hidden w-[52.386vw]" />
                 <div className="z-30 flex flex-col gap-y-[6vw]">
                     <div className="flex flex-col">
@@ -130,7 +130,7 @@ export default function BSO() {
                         </div>
                     </div>
                 </div>
-                <img className="bottom-[-160.5vw] left-0 absolute w-full z-0 lg:hidden" src="/img/home/circle-bc.svg" alt="" />
+                <img className="m-auto bottom-0 left-0 absolute w-full z-0 lg:hidden" src="/img/home/circle-bc.png" alt="" />
             </section>
         </section>
     );

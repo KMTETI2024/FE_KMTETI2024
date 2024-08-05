@@ -18,19 +18,19 @@ export default function Footer() {
                             <h2 className="font-redditsansbold text-[2.135vw] text-black">Navigate</h2>
                         </div>
                         <hr className="z-[9] w-[61.406vw] border-[0.2vw] border-black mb-[2.448vw]"></hr>
-                        <div className="flex gap-x-[11.094vw]">
-                            <div className="flex gap-x-[1.979vw]">
+                        <div className="flex gap-x-[11.694vw] place-items-center">
+                            <div className="flex gap-x-[1.979vw] items-center">
                                 <a className="w-[4.115vw] h-fit" href="https://www.instagram.com/kmteti">
                                     <img className="w-[4.115vw] h-fit" src="/img/allPage/Footer/IG.png" alt="" />
                                 </a>
-                                <a className="w-[4.763vw] h-fit" href="https://line.me/R/ti/p/@uai8629v">
+                                <a className="w-[4.115vw] h-fit" href="https://line.me/R/ti/p/@uai8629v">
                                     <img className="w-[4.763vw] h-fit" src="/img/allPage/Footer/Line.png" alt="" />
                                 </a>
                                 <a className="w-[4.115vw] h-fit" href="https://www.linkedin.com/company/kmteti-ft-ugm/mycompany/">
                                     <img className="w-[4.115vw] h-fit" src="/img/allPage/Footer/Linkedin.png" alt="" />
                                 </a>
                                 <a className="w-[4.948vw] h-fit" href="https://www.youtube.com/@kmteti">
-                                    <img className="w-[4.948vw]" src="/img/allPage/Footer/Youtube.png" alt="" />
+                                    <img className="w-[4.948vw] self-center" src="/img/allPage/Footer/Youtube.png" alt="" />
                                 </a>
                             </div>
                             <div className="leading-none grid grid-rows-3 grid-flow-col gap-y-[1vw] gap-x-[7.708vw]">
@@ -48,7 +48,7 @@ export default function Footer() {
 
             </div>
             <div>
-                <div className="flex lg:hidden flex-col">
+                <div className="flex lg:hidden flex-col ">
                     <div className="flex items-center justify-center flex-col rounded-t-[2.778vw] drop-shadow-xl">
                         <Link className="w-full h-[19.444vw] font-redditsanssemibold text-center text-black text-[3.889vw] border-b-[0.278vw] border-[#1B1B1B] border-opacity-10 self-center flex items-center justify-center" href="/"><p className=" items-center justify-center">Home</p></Link>
                         <Link className="w-full h-[19.444vw] font-redditsanssemibold text-center text-black text-[3.889vw] border-b-[0.278vw] border-[#1B1B1B] border-opacity-10 self-center flex items-center justify-center" href="/kepengurusan"><p className=" items-center justify-center">Kepengurusan</p></Link>
