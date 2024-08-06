@@ -1,7 +1,13 @@
 /* eslint-disable @next/next/no-img-element */
+"use client";
+
 import PropTypes from 'prop-types';
 import Link from 'next/link';
 import { FaAngleRight } from 'react-icons/fa';
+import { useEffect } from 'react';
+import Aos from "aos"
+import "aos/dist/aos.css"
+import { aosDuration, getDelay } from "../../../components/allPage/configs/aosConfig"
 
 const Card = ({ title, imgSrc, link }) => (
     <div className="flex flex-col">
@@ -27,10 +33,18 @@ export default function BSO() {
         { title: 'SKK', imgSrc: '/img/bso/SKK.png', link: '/bso/SKK' },
     ];
 
+    useEffect(() => {
+        Aos.init();
+      }, []);
+    
+
     return (
         <section>
             <section className="relative flex-col items-center justify-center bg-white lg:flex hidden">
-                <div className="grid grid-cols-2 gap-x-[12.708vw] gap-y-[6.198vw] py-[5.729vw]">
+                <div className="grid grid-cols-2 gap-x-[12.708vw] gap-y-[6.198vw] py-[5.729vw]"
+                data-aos="fade-up"
+                data-aos-duration={aosDuration}
+                data-aos-delay={getDelay({turn: 1})}>
                     {cards.map((card, index) => (
                         <Card key={index} {...card} />
                     ))}
@@ -38,7 +52,10 @@ export default function BSO() {
             </section>
             <section className="relative h-[350vw] w-full flex-col flex lg:flex-row justify-center items-center bg-white lg:hidden">
                 <img src="/img/home/circle-tr.svg" alt="" className="absolute top-[-20vw] right-0 lg:hidden w-[52.386vw]" />
-                <div className="z-30 flex flex-col gap-y-[6vw]">
+                <div className="z-30 flex flex-col gap-y-[6vw]" 
+                data-aos="fade-up"
+                data-aos-duration={aosDuration}
+                data-aos-delay={getDelay({turn: 1})}>
                     <div className="flex flex-col">
                         <h2 className="font-montserrat font-medium text-black text-[5.556vw] text-center self-start">Beacon</h2>
                         <div className="relative flex flex-col">

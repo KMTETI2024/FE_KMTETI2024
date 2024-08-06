@@ -1,5 +1,15 @@
 /* eslint-disable @next/next/no-img-element */
+"use client";
+import { useEffect } from 'react';
+import Aos from "aos"
+import "aos/dist/aos.css"
+import { aosDuration, getDelay } from "../../../../components/allPage/configs/aosConfig"
+
 export default function Magatrika() {
+    useEffect(() => {
+        Aos.init();
+      }, []);
+
     const leaders = [
         { title: "Ketua", name: "Brahmantio Farhan" },
         { title: "Wakil Ketua", name: "Raden Satrio" },
@@ -14,10 +24,20 @@ export default function Magatrika() {
 
     return (
         <main className="lg:px-[17.396vw] px-[7.778vw] py-[14.778vw] lg:py-[12.292vw] flex flex-col items-center justify-center bg-white">
-            <h1 className="text-black lg:text-[2.344vw] text-[5.556vw] font-montserrat font-medium lg:font-redditsanssemibold self-start lg:self-center hidden">Magatrika</h1>
-            <h1 className="text-black mb-[3.75vw] lg:text-[2.344vw] text-[5.556vw] font-montserrat font-medium lg:font-redditsanssemibold self-center">Magatrika</h1>
-            <img className="mb-[2.604vw] w-full h-full" src="/img/bso/Magatrika.png" alt="" />
-            <div className="flex flex-col gap-y-[1.75vw]">
+            <h1 className="text-black lg:text-[2.344vw] text-[5.556vw] font-montserrat font-medium lg:font-redditsanssemibold self-start lg:self-center hidden" data-aos="fade-up"
+            data-aos-duration={aosDuration}
+            data-aos-delay={getDelay({turn: 1})}>Magatrika</h1>
+            <h1 className="text-black mb-[3.75vw] lg:text-[2.344vw] text-[5.556vw] font-montserrat font-medium lg:font-redditsanssemibold self-center"
+            data-aos="fade-up"
+            data-aos-duration={aosDuration}
+            data-aos-delay={getDelay({turn: 1})}>Magatrika</h1>
+            <img className="mb-[2.604vw] w-full h-full" src="/img/bso/Magatrika.png" alt="" data-aos="fade-up"
+            data-aos-duration={aosDuration}
+            data-aos-delay={getDelay({turn: 2})}/>
+            <div className="flex flex-col gap-y-[1.75vw]"
+            data-aos="fade-up"
+            data-aos-duration={aosDuration}
+            data-aos-delay={getDelay({turn: 3})}>
                 <ul className="lg:font-archivo font-archivolight text-[3.333vw] lg:text-[1.302vw] text-[#1E1E1E] text-justify whitespace-pre-line leading-normal self-start">
                     {leaders.map((leader, index) => (
                         <li key={index}>

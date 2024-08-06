@@ -1,10 +1,15 @@
 'use client';
+/* eslint-disable @next/next/no-img-element */
 
 import React from 'react';
 import Link from 'next/link';
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
+import { useEffect } from 'react';
+import Aos from "aos"
+import "aos/dist/aos.css"
+import { aosDuration, getDelay } from "../../../../components/allPage/configs/aosConfig"
 
 const dummyData = [
     {
@@ -53,6 +58,10 @@ const dummyData = [
 ];
 
 const Voltamagz = () => {
+    useEffect(() => {
+        Aos.init();
+      }, []);
+
     const settings = {
         dots: true,
         infinite: true,
@@ -74,9 +83,16 @@ const Voltamagz = () => {
     return (
         <div className='px-[8.611vw] py-[28.778vw] lg:px-[16.146vw] lg:py-[11.094vw] '>
             <div className='flex-col gap-y-[2vw] lg:flex hidden'>
-                <h1 className='font-redditsanssemibold text-[2.344vw] text-black'>Elektropos</h1>
-                <hr className="z-[9] lg:w-full w-[77.222vw] h-[0.2vw] bg-black mb-[1vw]"></hr>
-                <div className=''>
+                <h1 className='font-redditsanssemibold text-[2.344vw] text-black' data-aos="fade-up"
+                data-aos-duration={aosDuration}
+                data-aos-delay={getDelay({turn: 1})}>Voltamagz</h1>
+                <hr className="z-[9] lg:w-full w-[77.222vw] h-[0.2vw] bg-black mb-[1vw]"
+                data-aos="fade-up"
+                data-aos-duration={aosDuration}
+                data-aos-delay={getDelay({turn: 2})}></hr>
+                <div className='' data-aos="fade-up"
+            data-aos-duration={aosDuration}
+            data-aos-delay={getDelay({turn: 3})}>
                     <Slider {...settings}>
                         {dummyData.map((item, index) => (
                             <Link key={index} href={item.link} className='lg:w-[24.71vw] lg:h-[29.333vw] p-[0.625vw] flex flex-col bg-[#F5F3F3] rounded-[0.26vw] gap-y-[0.5vw] justify-center items-center'>

@@ -1,9 +1,21 @@
+/* eslint-disable @next/next/no-img-element */
+"use client";
+import { useEffect } from 'react';
+import Aos from "aos"
+import "aos/dist/aos.css"
+import { aosDuration, getDelay } from "../../../../components/allPage/configs/aosConfig"
 import React from 'react'
 
 function Slug_TETIChampion() {
+    useEffect(() => {
+        Aos.init();
+      }, []);
   return (
     <div className='lg:px-[19.635vw] lg:py-[9.115vw] px-[7.778vw] py-[23.056vw] flex justify-center items-center'>
-        <div className='flex flex-col justify-center items-center gap-y-[6vw] lg:gap-y-[2vw] w-fit'>
+        <div className='flex flex-col justify-center items-center gap-y-[6vw] lg:gap-y-[2vw] w-fit'
+        data-aos="fade-up"
+        data-aos-duration={aosDuration}
+        data-aos-delay={getDelay({turn: 1})}>
             <div className='flex flex-row self-start'>
                 <div className='flex flex-col justify-center items-center '>
                     <h1 className='font-archivothin text-[6.111vw] lg:text-[1.823vw]'>Congratulations!</h1>
@@ -13,7 +25,10 @@ function Slug_TETIChampion() {
                     <img className='lg:w-[10vw] w-[25vw]' src="/img/teti_champion/piala.png" alt=""></img>
                 </div>
             </div>
-            <div className='flex lg:flex-row flex-col gap-x-[3vw] gap-y-[6vw] lg:gap-y-0 justify-center items-center'>
+            <div className='flex lg:flex-row flex-col gap-x-[3vw] gap-y-[6vw] lg:gap-y-0 justify-center items-center'
+            data-aos="fade-up"
+            data-aos-duration={aosDuration}
+            data-aos-delay={getDelay({turn: 2})}>
                 <div className='lg:w-[19.688vw] lg:h-fit p-[0.625vw] lg:flex flex-col bg-[#F5F3F3] rounded-[0.26vw] gap-y-[0.5vw] justify-center items-center hidden'>
                     <img className='w-[19.375vw] object-cover' src="/img/artikel/pr-cover.png" alt="" />
                     <div>

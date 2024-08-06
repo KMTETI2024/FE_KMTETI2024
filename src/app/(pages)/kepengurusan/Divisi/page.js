@@ -3,6 +3,9 @@
 /* eslint-disable @next/next/no-img-element */
 import { IoMdArrowDropdown } from 'react-icons/io';
 import { useEffect, useRef, useState } from 'react';
+import Aos from "aos"
+import "aos/dist/aos.css"
+import { aosDuration, getDelay } from "../../../../components/allPage/configs/aosConfig"
 
 export default function Divisi() {
   const [isOpen, setIsOpen] = useState(false);
@@ -24,6 +27,10 @@ export default function Divisi() {
     setSelectedItem(item);
     setIsOpen(false);
   };
+
+  useEffect(() => {
+    Aos.init();
+  }, []);
 
   useEffect(() => {
     if (isOpen) {
@@ -176,12 +183,15 @@ export default function Divisi() {
 
   return (
     <main className="lg:px-[17.396vw] px-[7.778vw] py-[14.778vw] lg:py-[12.292vw] flex flex-col items-center justify-center bg-white">
-      <div className='flex flex-row mb-[3.75vw]'>
+      <div className='flex flex-row mb-[3.75vw]' 
+            data-aos="fade-up"
+            data-aos-duration={aosDuration}
+            data-aos-delay={getDelay({turn: 1})}>
         <div className="flex lg:flex-row flex-col flex-grow">
           <h1 className="text-black lg:text-[2.344vw] text-[5.556vw] font-montserrat font-medium lg:font-redditsanssemibold self-start lg:self-center lg:mb-0 w-[50vw] lg:w-fit lg:leading-none">Divisi&nbsp;</h1>
           <h1 className="text-black lg:text-[2.344vw] text-[5.556vw] font-montserrat font-medium lg:font-redditsanssemibold self-start lg:self-center w-[50vw] lg:w-fit lg:leading-none">KMTETI FT UGM</h1>
         </div>
-        <div className='relative w-fit flex flex-col lg:gap-y-[0.903vw] gap-y-[1.806vw] lg:ml-[1vw] self-center'>
+        <div className='relative w-fit flex flex-col lg:gap-y-[0.903vw] gap-y-[1.806vw] lg:ml-[1vw] self-center z-[9999]'>
           <div
             className='w-fit lg:w-[16vw] px-[4vw] lg:px-[0.5vw] bg-white lg:rounded-[0.2vw] rounded-[0.5vw] flex justify-center items-center lg:gap-x-[0.5vw] gap-x-[1vw] pointer-events-auto cursor-pointer drop-shadow-xl self-end border-[0.1vw] border-black'
             onClick={toggleDropdown}
@@ -211,56 +221,62 @@ export default function Divisi() {
           </div>
         </div>
       </div>
-      <div className='flex flex-col justify-start items-start lg:gap-y-[2vw] gap-y-[6vw]'>
+      <div className='flex flex-col justify-start items-start lg:gap-y-[2vw] gap-y-[6vw]'
+>
         <img className=" w-full h-full" src={content.imgSrc} alt={selectedItem} />
-        <ul className="lg:font-archivo font-archivolight text-[3.333vw] lg:text-[1.302vw] text-[#1E1E1E] text-justify whitespace-pre-line leading-normal self-start">
-                {content.leaders?.map((leader, index) => (
-                <li key={index}>
-                    <span className="font-archivosemibold">{leader.title}:</span> {leader.name}
-                </li>
-                ))}
-            </ul>
-            { content.paragraph1?.length > 0 && (
-            <p className="lg:font-archivo font-archivolight text-[3.333vw] lg:text-[1.302vw] text-[#1E1E1E] text-justify whitespace-pre-line leading-normal items-start">
-                {content.paragraph1 || ''}
-            </p>
-        )
-        }
-        { content.paragraph2?.length > 0 && (
-            <p className="lg:font-archivo font-archivolight text-[3.333vw] lg:text-[1.302vw] text-[#1E1E1E] text-justify whitespace-pre-line leading-normal items-start">
-                {content.paragraph2 || ''}
-            </p>
-        )
-        }
-        { content.paragraph3?.length > 0 && (
-            <p className="lg:font-archivo font-archivolight text-[3.333vw] lg:text-[1.302vw] text-[#1E1E1E] text-justify whitespace-pre-line leading-normal items-start">
-                {content.paragraph3 || ''}
-            </p>
-        )
-        }
-        { content.paragraph4?.length > 0 && (
-            <p className="lg:font-archivo font-archivolight text-[3.333vw] lg:text-[1.302vw] text-[#1E1E1E] text-justify whitespace-pre-line leading-normal items-start">
-                {content.paragraph4 || ''}
-            </p>
-        )
-        }
-        <div>
-            {content.additionalPrograms && content.additionalPrograms?.length > 0 && (
-                <ul className=" lg:font-archivo font-archivolight text-[3.333vw] lg:text-[1.302vw] text-[#1E1E1E] text-justify whitespace-pre-line leading-normal list-decimal self-start">
-                    {content.additionalPrograms?.map((program, index) => (
-                    <li key={index}>{program}</li>
-                    ))}
-                </ul>
-                )}
-        </div>
-        <div>
-            {content.additionalProgramsbullets && content.additionalProgramsbullets?.length > 0 && (
-                <ul className="lg:font-archivo font-archivolight text-[3.333vw] lg:text-[1.302vw] text-[#1E1E1E] text-justify leading-normal list-disc self-start">
-                    {content.additionalProgramsbullets?.map((program, index) => (
-                    <li key={index}>{program}</li>
-                    ))}
-                </ul>
-            )}
+        <div className='flex flex-col justify-start items-start lg:gap-y-[2vw] gap-y-[6vw]' 
+            data-aos="fade-up"
+            data-aos-duration={aosDuration}
+            data-aos-delay={getDelay({turn: 2})}>
+          <ul className="lg:font-archivo font-archivolight text-[3.333vw] lg:text-[1.302vw] text-[#1E1E1E] text-justify whitespace-pre-line leading-normal self-start">
+                  {content.leaders?.map((leader, index) => (
+                  <li key={index}>
+                      <span className="font-archivosemibold">{leader.title}:</span> {leader.name}
+                  </li>
+                  ))}
+              </ul>
+              { content.paragraph1?.length > 0 && (
+              <p className="lg:font-archivo font-archivolight text-[3.333vw] lg:text-[1.302vw] text-[#1E1E1E] text-justify whitespace-pre-line leading-normal items-start">
+                  {content.paragraph1 || ''}
+              </p>
+          )
+          }
+          { content.paragraph2?.length > 0 && (
+              <p className="lg:font-archivo font-archivolight text-[3.333vw] lg:text-[1.302vw] text-[#1E1E1E] text-justify whitespace-pre-line leading-normal items-start">
+                  {content.paragraph2 || ''}
+              </p>
+          )
+          }
+          { content.paragraph3?.length > 0 && (
+              <p className="lg:font-archivo font-archivolight text-[3.333vw] lg:text-[1.302vw] text-[#1E1E1E] text-justify whitespace-pre-line leading-normal items-start">
+                  {content.paragraph3 || ''}
+              </p>
+          )
+          }
+          { content.paragraph4?.length > 0 && (
+              <p className="lg:font-archivo font-archivolight text-[3.333vw] lg:text-[1.302vw] text-[#1E1E1E] text-justify whitespace-pre-line leading-normal items-start">
+                  {content.paragraph4 || ''}
+              </p>
+          )
+          }
+          <div>
+              {content.additionalPrograms && content.additionalPrograms?.length > 0 && (
+                  <ul className=" lg:font-archivo font-archivolight text-[3.333vw] lg:text-[1.302vw] text-[#1E1E1E] text-justify whitespace-pre-line leading-normal list-decimal self-start">
+                      {content.additionalPrograms?.map((program, index) => (
+                      <li key={index}>{program}</li>
+                      ))}
+                  </ul>
+                  )}
+          </div>
+          <div>
+              {content.additionalProgramsbullets && content.additionalProgramsbullets?.length > 0 && (
+                  <ul className="lg:font-archivo font-archivolight text-[3.333vw] lg:text-[1.302vw] text-[#1E1E1E] text-justify leading-normal list-disc self-start">
+                      {content.additionalProgramsbullets?.map((program, index) => (
+                      <li key={index}>{program}</li>
+                      ))}
+                  </ul>
+              )}
+          </div>
         </div>
       </div>
     </main>

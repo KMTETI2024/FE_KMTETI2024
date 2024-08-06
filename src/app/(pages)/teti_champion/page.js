@@ -1,10 +1,15 @@
 'use client';
+/* eslint-disable @next/next/no-img-element */
 
 import React from 'react';
 import Link from 'next/link';
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
+import { useEffect } from 'react';
+import Aos from "aos"
+import "aos/dist/aos.css"
+import { aosDuration, getDelay } from "../../../components/allPage/configs/aosConfig"
 
 const dummyData = [
     {
@@ -52,7 +57,9 @@ const dummyData = [
     },
 ];
 
-const teti_champion = () => {
+
+
+const TETIChampion = () => {
     const settings = {
         dots: true,
         infinite: true,
@@ -71,10 +78,16 @@ const teti_champion = () => {
         slidesToScroll: 1
     };
 
+    useEffect(() => {
+        Aos.init();
+      }, []);
+
     return (
         <div className='px-[8.611vw] py-[28.778vw] lg:px-[16.146vw] lg:py-[11.094vw] '>
             <div className='flex-col gap-y-[2vw] lg:flex hidden'>
-                <div className=''>
+                <div className='' data-aos="fade-up"
+            data-aos-duration={aosDuration}
+            data-aos-delay={getDelay({turn: 1})}>
                     <Slider {...settings}>
                         {dummyData.map((item, index) => (
                             <div key={index} className='lg:w-[20.625vw] lg:h-[31.333vw] p-[0.625vw] flex flex-col bg-[#F5F3F3] rounded-[0.26vw] gap-y-[0.5vw]'>
@@ -123,4 +136,4 @@ const teti_champion = () => {
     );
 };
 
-export default teti_champion;
+export default TETIChampion;

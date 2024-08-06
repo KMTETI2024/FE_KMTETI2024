@@ -1,14 +1,28 @@
+/* eslint-disable @next/next/no-img-element */
+"use client";
+import { useEffect } from 'react';
+import Aos from "aos"
+import "aos/dist/aos.css"
+import { aosDuration, getDelay } from "../../../../../components/allPage/configs/aosConfig"
 import React from 'react'
 
 function Slug_Elektropos() {
+    useEffect(() => {
+        Aos.init();
+      }, []);
+
   return (
     <div className='lg:px-[19.635vw] lg:py-[9.115vw] px-[7.778vw] py-[23.056vw]'>
-        <div className='flex flex-col justify-center items-center gap-y-[6vw] lg:gap-y-[2vw]'>
+        <div className='flex flex-col justify-center items-center gap-y-[6vw] lg:gap-y-[2vw]' data-aos="fade-up"
+            data-aos-duration={aosDuration}
+            data-aos-delay={getDelay({turn: 1})}>
             <div className='flex flex-col justify-center items-center'>
                 <h1 className='font-redditsanssemibold text-[6.111vw] lg:text-[1.823vw]'>Elektropos KMTETI</h1>
                 <h2 className='font-redditsans text-[6.111vw] lg:text-[1.823vw]'>April 2024</h2>
             </div>
-            <div className='flex lg:flex-row flex-col gap-x-[3vw] gap-y-[6vw] lg:gap-y-0 justify-center items-center'>
+            <div className='flex lg:flex-row flex-col gap-x-[3vw] gap-y-[6vw] lg:gap-y-0 justify-center items-center' data-aos="fade-up"
+            data-aos-duration={aosDuration}
+            data-aos-delay={getDelay({turn: 1})}>
                 <div className='lg:w-[20.71vw] lg:h-[29.333vw] p-[0.625vw] lg:flex flex-col bg-[#F5F3F3] rounded-[0.26vw] gap-y-[0.5vw] justify-center items-center hidden'>
                     <img className='w-[19.375vw] object-cover' src="/img/artikel/pr-cover.png" alt="" />
                     <h2 className='font-archivo text-black text-[1.042vw] my-[0.6vw] self-center text-center'>Elektropos KMTETI April 2024</h2>

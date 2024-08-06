@@ -1,13 +1,25 @@
+"use client";
+/* eslint-disable @next/next/no-img-element */
 import React from 'react'
 import Link from 'next/link'
 import { FaAngleRight } from 'react-icons/fa'
+import { useEffect } from 'react';
+import Aos from "aos"
+import "aos/dist/aos.css"
+import { aosDuration, getDelay } from "../../../components/allPage/configs/aosConfig"
 
 function Artikel() {
+    useEffect(() => {
+        Aos.init();
+      }, []);
   return (
     <div className='bg-[#D2E4A9]'>
-        <div className='py-[12.448vw] px-[5.208vw] flex-row justify-center items-center gap-x-[3.49vw] lg:flex hidden'>
+        <div className='py-[12.448vw] px-[5.208vw] flex-row justify-center items-center gap-x-[3.49vw] lg:flex hidden' 
+            data-aos="fade-up"
+            data-aos-duration={aosDuration}
+            data-aos-delay={getDelay({turn: 1})}>
             <Link href="/artikel/press-release" className='w-[19.167vw] h-[26.51vw] relative group'>
-                <img className='absolute z-[15] m-auto left-0 right-0 top-0 bottom-0' src="/img/artikel/line.png" alt="" />
+                <img className='absolute z-[15] m-auto left-0 right-0 top-0 bottom-0 w-full' src="/img/artikel/line.png" alt="" />
                 <div className='w-[19.167vw] h-[2.424vw] bg-[#066EB5] absolute z-[20] m-auto left-0 right-0 top-0 bottom-0 flex justify-center items-center -rotate-3 object-contain shadow-xl'>
                     <h2 className='font-redditsanssemibold text-[1.875vw] text-white'>
                         Press Release
@@ -17,7 +29,7 @@ function Artikel() {
                 <img className='w-[19.167vw] rounded-[2.00vw]' src="/img/artikel/pr.png" alt="" />
             </Link>
             <Link href="/artikel/elektropos" className='w-[19.167vw] h-[26.51vw] relative group'>
-                <img className='absolute z-[15] m-auto left-0 right-0 top-0 bottom-0' src="/img/artikel/line.png" alt="" />
+                <img className='w-full absolute z-[15] m-auto left-0 right-0 top-0 bottom-0' src="/img/artikel/line.png" alt="" />
                 <div className='w-[19.167vw] h-[2.424vw] bg-[#066EB5] absolute z-[20] m-auto left-0 right-0 top-0 bottom-0 flex justify-center items-center -rotate-3 object-contain shadow-xl'>
                     <h2 className='font-redditsanssemibold text-[1.875vw] text-white'>
                         Elektropos
@@ -27,7 +39,7 @@ function Artikel() {
                 <img className='w-[19.167vw] rounded-[2.00vw]' src="/img/artikel/elektropos.png" alt="" />
             </Link>
             <Link href="/artikel/voltamagz" className='w-[19.167vw] h-[26.51vw] relative group'>
-                <img className='absolute z-[15] m-auto left-0 right-0 top-0 bottom-0' src="/img/artikel/line.png" alt="" />
+                <img className='w-full absolute z-[15] m-auto left-0 right-0 top-0 bottom-0' src="/img/artikel/line.png" alt="" />
                 <div className='w-[19.167vw] h-[2.424vw] bg-[#066EB5] absolute z-[20] m-auto left-0 right-0 top-0 bottom-0 flex justify-center items-center -rotate-3 object-contain shadow-xl'>
                     <h2 className='font-redditsanssemibold text-[1.875vw] text-white'>
                         Voltamagz
@@ -37,7 +49,9 @@ function Artikel() {
                 <img className='w-[19.167vw] rounded-[2.00vw]' src="/img/artikel/voltamagz.png" alt="" />
             </Link>
         </div>
-        <div className='flex flex-col justify-center items-center py-[25.111vw] px-[6.667vw] gap-y-[12.5vw] lg:hidden'>
+        <div className='flex flex-col justify-center items-center py-[25.111vw] px-[6.667vw] gap-y-[12.5vw] lg:hidden' data-aos="fade-up"
+            data-aos-duration={aosDuration}
+            data-aos-delay={getDelay({turn: 1})}>
             <div className='h-[49.722vw] relative group'>
                 <div className='absolute z-[20] flex flex-col justify-center items-center w-full h-[49.722vw]'>
                     <h1 className='font-redditsanssemibold text-white text-[8.056vw]'>Press Release</h1>
